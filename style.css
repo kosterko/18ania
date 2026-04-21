@@ -17,6 +17,8 @@
     --pixel-btn-inset-pressed: rgba(155, 61, 114, 0.32);
     --border-tile-height: 60px;
     --border-strip-width: 300px;
+    /* Skalowanie okienek zdjęć — na wąskim ekranie węższe niż 267px */
+    --image-window-frame-w: min(267px, calc(100vw - 3rem));
 }
 
 /* =============================================================================
@@ -46,6 +48,8 @@ html {
 body {
     margin: 0;
     height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
     overflow: hidden;
 }
 
@@ -143,12 +147,12 @@ body {
 }
 
 .imagewindow-wrap .image-window {
-    flex: 0 0 267px;
-    flex-shrink: 0;
+    flex: 0 1 var(--image-window-frame-w);
+    flex-shrink: 1;
     flex-grow: 0;
-    width: 267px;
-    min-width: 267px;
-    max-width: 267px;
+    width: var(--image-window-frame-w);
+    min-width: 0;
+    max-width: var(--image-window-frame-w);
 }
 
 /* Kolumna: okno obrazka + podpis (imię) — jeden blok obok text-window */
@@ -164,7 +168,7 @@ body {
 .image-window__name {
     margin: 0;
     width: 100%;
-    max-width: 267px;
+    max-width: var(--image-window-frame-w);
     text-align: center;
     font-size: 1.2rem;
     line-height: 1.25;
@@ -197,25 +201,22 @@ body {
 }
 
 /*
- * Okno obrazka: 267×268. Rozmiar kontenera = aspect-ratio (skaluje się z szerokością).
- * Padding % w pionie liczy się od SZEROKOści — stąd złe marginesy; używamy cqh/cqw + container-type.
- * Dostosuj --pad-* (cqh = % wysokości okna, cqw = % szerokości).
+ * Okno obrazka: ramka ~267×268; trochę wyższy stosunek = więcej miejsca na zdjęcie w pionie.
+ * Mat: mniejsze cqh u góry/dole = wyższy widoczny obszar obrazu (ramka PNG dalej object-fit: fill).
  */
 .image-window {
-    --image-window-frame-w: 267px;
     position: relative;
     display: inline-block;
     max-width: 100%;
     width: min(100%, var(--image-window-frame-w));
-    aspect-ratio: 267 / 268;
+    aspect-ratio: 267 / 288;
     vertical-align: top;
     container-type: size;
     container-name: image-window;
     line-height: 0;
-    /* Domyślny „chrome” pod typowe okno z paskiem tytułu (dostosuj do PNG) */
-    --image-mat-pad-t: 14cqh;
+    --image-mat-pad-t: 9cqh;
     --image-mat-pad-r: 2cqw;
-    --image-mat-pad-b: 3.5cqh;
+    --image-mat-pad-b: 2.2cqh;
     --image-mat-pad-l: 2cqw;
 }
 
@@ -232,7 +233,7 @@ body {
     inset: 0;
     box-sizing: border-box;
     /* Fallback bez jednostek kontenera: % liczone od szerokości (pion tylko przybliżony) */
-    padding: 13% 2% 4.5% 2%;
+    padding: 8% 2% 2.8% 2%;
     display: grid;
     grid-template: 1fr / 1fr;
     min-width: 0;
@@ -374,6 +375,7 @@ body {
     justify-content: center;
     min-width: 7.5em;
     margin: 10px;
+    touch-action: manipulation;
     padding: 12px 32px;
     font-family: var(--font-ui);
     font-weight: 400;
@@ -552,12 +554,6 @@ body {
     display: none !important;
 }
 
-@media (max-width: 520px) {
-    .countdown-clock__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 .password-gate__window {
     position: relative;
     z-index: 1;
@@ -677,6 +673,7 @@ body {
     align-self: flex-end;
     margin: 4px 0 0;
     padding: 10px 28px;
+    touch-action: manipulation;
     font-family: var(--font-ui);
     font-size: 1.2rem;
     line-height: 1.1;
@@ -837,4 +834,212 @@ body {
     background-position: center top;
     background-size: auto var(--border-tile-height);
     image-rendering: pixelated;
+}
+
+/* =============================================================================
+   Responsywność: ten sam wygląd co na ~1920×1080, ale skalowanie na tablet,
+   telefon, portret i bardziej „kwadratowe” proporcje (min-aspect-ratio)
+   ============================================================================= */
+
+@media (max-width: 1400px) {
+    :root {
+        --border-strip-width: min(300px, 22vw);
+        --image-window-frame-w: min(267px, calc(100vw - 4rem));
+    }
+
+    .main-nav__decor--left {
+        margin-left: clamp(12px, 4vw, 70px);
+    }
+
+    .main-nav__decor--right {
+        margin-right: clamp(12px, 4vw, 70px);
+    }
+}
+
+@media (max-width: 1100px) {
+    .page-aside {
+        width: 14%;
+    }
+
+    .page-main {
+        width: 72%;
+    }
+
+    :root {
+        --border-strip-width: min(260px, 26vw);
+        --image-window-frame-w: min(240px, calc(72vw - 2.5rem));
+    }
+
+    .text-window__content {
+        font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+    }
+}
+
+@media (max-width: 900px) {
+    .page-aside {
+        display: none;
+    }
+
+    .page-main {
+        float: none;
+        width: 100%;
+    }
+
+    :root {
+        --border-strip-width: min(220px, 28vw);
+        --image-window-frame-w: min(267px, calc(100vw - 3.5rem));
+    }
+
+    .border-strip--left {
+        transform: translateX(-35%);
+    }
+
+    .border-strip--right {
+        transform: translateX(35%);
+    }
+
+    .imagewindow-wrap,
+    .imagewindow-wrap--left,
+    .imagewindow-wrap--right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imagewindow-wrap .text-window {
+        flex: 1 1 100%;
+        max-width: min(520px, 100%);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imagewindow-wrap .image-window {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .windows-showcase {
+        padding: 16px 12px 24px;
+        gap: 1.25rem;
+    }
+
+    .main-nav__list a.main-nav__pixel {
+        font-size: clamp(1.05rem, 3.8vw, 1.35rem);
+        padding: 10px 22px;
+        margin: 8px;
+    }
+
+    .countdown-clock__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100dvh;
+        max-height: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    html {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: auto;
+        min-height: 100%;
+    }
+
+    .page-aside {
+        display: none;
+    }
+
+    .page-main {
+        float: none;
+        width: 100%;
+        flex: 1 1 auto;
+        min-height: 100dvh;
+    }
+
+    :root {
+        --border-strip-width: min(180px, 42vw);
+        --border-tile-height: clamp(44px, 12vw, 60px);
+        --image-window-frame-w: min(267px, calc(100vw - 2rem));
+    }
+
+    .border-strip--left {
+        transform: translateX(-28%);
+    }
+
+    .border-strip--right {
+        transform: translateX(28%);
+    }
+
+    .main-nav {
+        min-height: 3.75rem;
+        padding: 0.45rem 0.35rem;
+    }
+
+    .main-nav__decor {
+        width: clamp(36px, 14vw, 72px);
+    }
+
+    .main-nav__decor--left {
+        margin-left: clamp(4px, 2vw, 24px);
+        margin-right: 0;
+    }
+
+    .main-nav__decor--right {
+        margin-right: clamp(4px, 2vw, 24px);
+        margin-left: 0;
+    }
+
+    .password-gate {
+        padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right))
+            max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+    }
+
+    .imagewindow-wrap > img {
+        max-width: min(120px, 32vw) !important;
+        width: auto !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 0.75rem !important;
+        display: block;
+    }
+}
+
+/* Portret / kwadrat: węższe boki przy dużym ekranie (boczne listki nadal widoczne) */
+@media (max-aspect-ratio: 1/1) and (min-width: 901px) {
+    :root {
+        --image-window-frame-w: min(267px, calc(100vw - 2.5rem));
+    }
+
+    .page-aside {
+        width: min(18%, 140px);
+    }
+
+    .page-main {
+        width: calc(100% - 2 * min(18%, 140px));
+    }
+}
+
+@media (min-width: 641px) and (max-height: 700px) {
+    .main-nav {
+        min-height: 3.5rem;
+    }
+
+    .windows-showcase {
+        padding-top: 12px;
+        padding-bottom: 16px;
+    }
 }

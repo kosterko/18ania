@@ -1,4 +1,4 @@
-// const CORRECT_PASSWORD = "EdwardZjadłSołtysa";
+const CORRECT_PASSWORD2 = "EdwardZjadłSołtysa";
 const CORRECT_PASSWORD = "1";
 
 const COUNTDOWN_TIMEZONE = "Europe/Warsaw";
@@ -119,7 +119,7 @@ function checkPassword() {
     const gate = document.getElementById("password-gate");
     const gateBackdrop = document.getElementById("password-gate-backdrop");
 
-    if (input.value === CORRECT_PASSWORD) {
+    if (input.value === CORRECT_PASSWORD || input.value === CORRECT_PASSWORD2) {
         protectedEl.style.display = "flex";
         gate.style.display = "none";
         if (gateBackdrop) gateBackdrop.style.display = "none";
