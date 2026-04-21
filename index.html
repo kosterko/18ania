@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="page-aside page-aside--left" aria-hidden="true"></aside>
+
+    <main class="page-main">
+        <div class="border-strip border-strip--left" aria-hidden="true">
+            <div class="border-tile-wrap"><img class="border-tile border-tile--left" src="border.png" alt=""></div>
+            <div class="border-tile-wrap"><img class="border-tile border-tile--left2" src="border.png" alt=""></div>
+        </div>
+        <div class="border-strip border-strip--right" aria-hidden="true">
+            <div class="border-tile-wrap"><img class="border-tile border-tile--right" src="border.png" alt=""></div>
+            <div class="border-tile-wrap"><img class="border-tile border-tile--right2" src="border.png" alt=""></div>
+        </div>
+
+        <div id="password-gate-backdrop" class="password-gate-backdrop" aria-hidden="true"></div>
+
+        <div id="protected" class="protected">
+            <nav class="main-nav" aria-label="Nawigacja">
+                <img class="main-nav__decor main-nav__decor--left" src="cake.png" alt="">
+                <ul class="main-nav__list">
+                    <!-- Pixel art buttons: gruby obrys + cień jak „Simple Pixel Art Buttons”, kolory z palety strony -->
+                    <li><a class="main-nav__pixel" href="index.html">Zyczenia</a></li>
+                    <li><a class="main-nav__pixel" href="zdjecia.html">Zdjecia</a></li>
+                </ul>
+                <img class="main-nav__decor main-nav__decor--right" src="bunny.png" alt="">
+            </nav>
+
+            <div class="nav-section-border-wrap" aria-hidden="true"></div>
+
+            <!-- 13 statycznych wierszy — podmień src / tekst w każdym; --left = obraz|tekst, --right = tekst|obraz (row-reverse) -->
+            <section class="page-content">
+                <!-- Układ wiersza: imagewindow-wrap--left (obraz|tekst) lub --right (tekst|obraz) — ustawiasz ręcznie na każdym <article> -->
+                <div class="windows-showcase">
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-01">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Daria</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="blade.png" alt="blade" style="width: 15%; height: 15%; margin-right: 200px; margin-top: 100px; transform: scaleX(-1);">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-02">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Lena</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="bunny2.png" alt="bunny2" style="width: 15%; height: 15%; margin-left: 200px; margin-top: 100px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-03">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Zofia</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="catpresent.png" alt="catpresent" style="width: 15%; height: 15%; margin-right: 200px; margin-top: 100px; transform: scaleX(-1);">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-04">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Krystian</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="bear.png" alt="bear" style="width: 15%; height: 15%; margin-right: 200px; margin-top: 150px; transform: scaleX(-1);">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-05">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Piotrek</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="cat.png" alt="cat" style="width: 10%; height: 10%; margin-left: 200px; margin-top: 120px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-06">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Basia</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="strawcat.png" alt="strawberry" style="width: 10%; height: 10%; margin-right: 250px; margin-top: 150px; transform: scaleX(-1);">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-06">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Weronika</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="foxy.png" alt="foxy" style="width: 10%; height: 10%; margin-right: 250px; margin-top: 150px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-07">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Dawid</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="doghpb.png" alt="doghpb" style="width: 10%; height: 10%; margin-left: 200px; margin-top: 120px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-08">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Alan</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="afton.png" alt="afton" style="width: 7%; height: 7%; margin-left: 250px; margin-top: 120px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-09">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Sara</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                        <img src="bunny3.png" alt="bunny3" style="width: 10%; height: 10%; margin-right: 250px; margin-top: 150px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-10">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Martyna</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-11">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Zuzia</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-12">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Igor</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                    </article><article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-12">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Milena</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-13">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="test.jpg" alt=""></div><img class="image-window__frame" src="imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Filip</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p><img class="text-window__frame" src="textwindow.png" alt=""></div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <div id="password-gate" class="password-gate" role="presentation">
+            <div class="countdown-clock" id="countdown-clock" role="timer">
+                <!-- Napis z datą: dopasuj do stałych COUNTDOWN_* w script.js -->
+                <div id="countdown-clock-running" class="countdown-clock__running">
+                    <p class="countdown-clock__caption">
+                        Do <strong>6 maja 2026</strong> · <strong>18:00</strong>
+                        <span class="countdown-clock__tz">czas polski (Europe/Warsaw)</span>
+                    </p>
+                    <div class="countdown-clock__grid">
+                        <div class="countdown-clock__cell">
+                            <span class="countdown-clock__value" id="countdown-days">0</span>
+                            <span class="countdown-clock__unit">dni</span>
+                        </div>
+                        <div class="countdown-clock__cell">
+                            <span class="countdown-clock__value" id="countdown-hours">0</span>
+                            <span class="countdown-clock__unit">godz</span>
+                        </div>
+                        <div class="countdown-clock__cell">
+                            <span class="countdown-clock__value" id="countdown-minutes">0</span>
+                            <span class="countdown-clock__unit">min</span>
+                        </div>
+                        <div class="countdown-clock__cell">
+                            <span class="countdown-clock__value" id="countdown-seconds">0</span>
+                            <span class="countdown-clock__unit">sek</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="countdown-clock__finished" id="countdown-finished" hidden>Happy Birthday!</p>
+            </div>
+            <div
+                class="password-gate__window"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="password-gate-title"
+            >
+                <header class="password-gate__titlebar">
+                    <span class="password-gate__title-dots" aria-hidden="true"></span>
+                    <h2 class="password-gate__title" id="password-gate-title">Secure login</h2>
+                    <span class="password-gate__title-dots password-gate__title-dots--right" aria-hidden="true"></span>
+                </header>
+                <div class="password-gate__body">
+                    <label class="password-gate__label" for="password-input">Password</label>
+                    <input
+                        type="password"
+                        id="password-input"
+                        class="password-gate__input"
+                        placeholder="········"
+                        autocomplete="current-password"
+                    >
+                    <button type="button" id="password-button" class="password-gate__btn">Login</button>
+                    <div id="password-error" class="password-error" role="alert">Invalid password</div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <p>Made by Krystian with help in designing from Daria, Piotrek, Zofia.</p>
+        </footer>
+    </main>
+
+    <aside class="page-aside page-aside--right" aria-hidden="true"></aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
