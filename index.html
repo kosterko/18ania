@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Happy Birthday!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="page-aside page-aside--left" aria-hidden="true"></aside>
+
+    <main class="page-main">
+        <div class="border-strip border-strip--left" aria-hidden="true">
+            <div class="border-tile-wrap"><img class="border-tile border-tile--left" src="bgimages/border.png" alt=""></div>
+            <div class="border-tile-wrap"><img class="border-tile border-tile--left2" src="bgimages/border.png" alt=""></div>
+        </div>
+        <div class="border-strip border-strip--right" aria-hidden="true">
+            <div class="border-tile-wrap"><img class="border-tile border-tile--right" src="bgimages/border.png" alt=""></div>
+            <div class="border-tile-wrap"><img class="border-tile border-tile--right2" src="bgimages/border.png" alt=""></div>
+        </div>
+
+        <div id="password-gate-backdrop" class="password-gate-backdrop" aria-hidden="true"></div>
+
+        <div id="protected" class="protected">
+            <nav class="main-nav" aria-label="Nawigacja">
+                <img class="main-nav__decor main-nav__decor--left" src="minimages/cake.png" alt="">
+                <ul class="main-nav__list">
+                    <!-- Pixel art buttons: gruby obrys + cień jak „Simple Pixel Art Buttons”, kolory z palety strony -->
+                    <li><a class="main-nav__pixel" href="index.html">Zyczenia</a></li>
+                    <li><a class="main-nav__pixel" href="zdjecia/index.html">Zdjecia</a></li>
+                </ul>
+                <img class="main-nav__decor main-nav__decor--right" src="minimages/bunny.png" alt="">
+            </nav>
+
+            <div class="nav-section-border-wrap" aria-hidden="true"></div>
+
+            <!-- 13 statycznych wierszy — podmień src / tekst w każdym; --left = obraz|tekst, --right = tekst|obraz (row-reverse) -->
+            <section class="page-content">
+                <!-- Układ wiersza: imagewindow-wrap--left (obraz|tekst) lub --right (tekst|obraz) — ustawiasz ręcznie na każdym <article> -->
+                <div class="windows-showcase">
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-01">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/daria.png" alt="Zdjęcie: Daria"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Daria</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">wszystkiego najlepszego Aniu!! pieniedzy na wszystkie zachcianki i potrzeby, buldakow, sily aby bic moidow i aby ci naoya nago tanczyl!!</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/blade.png" alt="blade" style="width: 15%; height: 15%; margin-right: 200px; margin-top: 100px; transform: scaleX(-1);">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-02">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/lena.png" alt="Zdjęcie: Lena"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Lena</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">hej slodka troscian wszystkiego najlepszego zycze ci bogactwa jak krulowa i niewiem zebys byla happy !!! jestes teras unc !!!!!! ogolnie tooo mega cie lubie bo jestes fajna i sie bardzo ciesze ze zaczelysmy gadac i supi ze masz urodziny bo niewiem bo to sa urodziny a urodziny sa fajne ale no nieumiem pisac zyczen
+                            WSZYSTKIEGO NAJLEPSZEGO !!!!j!!!!!!!!!!!!!!!!!!!!!! lovju lov lov</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/bunny2.png" alt="bunny2" style="width: 15%; height: 15%; margin-left: 200px; margin-top: 100px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-03">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/piksa.png" alt="Zdjęcie: Zofia"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Zofia</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Wszystkiego najlepszego Anuh!!! Zdrowia, szczęścia, pomarańczy, niech ci blade nago tańczy i Michael z sufitu patrzy. Obyś kasy miała od chuja i więcej, na ubrania i kompa. Mimo tych 18 dla mnie zawsze będziesz miała te 13 lat, obsesje na mha i będziesz ubierała się jak gotka. Kocham cię Ania!!</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/catpresent.png" alt="catpresent" style="width: 15%; height: 15%; margin-right: 200px; margin-top: 100px; transform: scaleX(-1);">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-04">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="minimages/ktos.png" alt="Zdjęcie: Krystian"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Krystian</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">ABCD</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/bear.png" alt="bear" style="width: 15%; height: 15%; margin-right: 200px; margin-top: 150px; transform: scaleX(-1);">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-05">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/piotrek.png" alt="Zdjęcie: Piotrek"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Piotrek</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Wszystkiego najlepszego Aniuch!!! Zycze Ci kaski na wszystkie monstery, buldagi, sianka dla edka i komisje na pregnant naoye zenin. Moze w koncu jak masz 18-stke to ruda malpa ci da w spokoju goonowac w swojej ruderze. Stay retarded unc, nie zmieniaj sie.🥳</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/cat.png" alt="cat" style="width: 10%; height: 10%; margin-left: 200px; margin-top: 120px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-06">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/basia.png" alt="Zdjęcie: Basia"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Basia</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">HEJ ANIASAYO WSZYSTKIEGO NAJLEPSZEGO KOCHAM CIE NIE ZMIENIAJ SIE BO JESTES SLODKA SUPER NIE ZYCZS CI BULDAKOW ANI MONSTERUW BO JESTEM ORYGINALNA NIETO CO INNI ZYCZE CI NATOMIAST RENTY I MILEGO BYCIA BABCIOM LOVE U 💗💗💗</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/strawcat.png" alt="strawberry" style="width: 10%; height: 10%; margin-right: 250px; margin-top: 150px; transform: scaleX(-1);">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-06b">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/wera.png" alt="Zdjęcie: Weronika"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Weronika</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Aniu życzę ci wszystkiego najlepszego w 18 urodziny i wszystkie następne, dużo pieniędzy i monsterów, teraz ty też jesteś babcią.</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/foxy.png" alt="foxy" style="width: 10%; height: 10%; margin-right: 250px; margin-top: 150px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-07">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/dawid.png" alt="Zdjęcie: Dawid"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Dawid</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Aniu wszystkiego najlepszego z okazji 18-stki! Niech życie cię rozpieszcza a dobre chwile niech same się znajdują. Pamiętaj by być soba a co najważniejsze odpowiedzialną. Wszystkiego najlepszego! 🎈🥳🎂</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/doghpb.png" alt="doghpb" style="width: 10%; height: 10%; margin-left: 200px; margin-top: 120px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-08">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/alan.png" alt="Zdjęcie: Alan"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Alan</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Sto lat ania abyś miała tyle hajsu żebyś mogła kupić wszystko w maku , dużo energii byś mogła Krystiania bić i dobrych ocen byś nie powtarzała klasy</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/afton.png" alt="afton" style="width: 7%; height: 7%; margin-left: 250px; margin-top: 120px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-09">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/sara.png" alt="Zdjęcie: Sara"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Sara</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Chej na twoje urodziny życze Ci Aniu tradycyjnie kasy chlania i ruchania jak jest kasa to jest pomyslnosc jak ruchanie to zdrowie a jak jest chlanie to jest szczescie. Miej dużo powodów do szczescia i wiele sukcesow w doroslym zyciu. Oby ci to przynioslo cudne chwile. Nie rezygnuj z tego co dla Ciebie ważne i napewno mądrze wybieraj 😙 Niech w twoim zyciu nie zabraknie ci wspierajacych i przede wszystkim non-toxic ludzi ktorzy na ciebie zasluguja. Czerp kochana radosc z zycia i fr korzystaj z niego❤️‍🩹 
+                            I oby Cie plecy nie napierdalaly
+                            Witamy w klubie staruszkow, love ya 😜 <33</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/bunny3.png" alt="bunny3" style="width: 10%; height: 10%; margin-right: 250px; margin-top: 150px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-10">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/martyna.png" alt="Zdjęcie: Martyna"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Martyna</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Wszystkiego najlepszego Ania!! Życze ci dużo szczęścia zdrowia i oczywiście pieniędzy na wszystkie twoje zachcianki i żebyś żyła tak jak ci sie podoba!!!</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/rambo.png" alt="rambo" style="width: 20%; height: 20%; margin-left: 200px; margin-top: 50px;">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-11">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/zuzia.png" alt="Zdjęcie: Zuzia"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Zuzia</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Szczesliwej 18 troscian!!! Zycze ci duzo pieniedzy na energetyki, wiecej bunnies, duzo wygranych gier(tak szczerze nie wiem w co grasz chyba umamusume) i oczywiscie duzo SZCZESCIAAA!!!!!! Jestem mega wdzieczna ze zaczelysmy gadac i ze razem z lena tworzymy bunny trio🥺 Pamietaj ze zawsze mozesz na mnie liczyc. Jak tylko potrzebujesz to pisz. Jak czegosc nie rozumiesz to mow. Mega love, mam nadzieje ze bede nadal cie krasc od twojej grupki zebys sie nie spozniala i ze bedziemy sie przyjaznic do konca szkoly( po szkole tez ofc) JESZCZE RAZ WSZYSTKIEGO NAJLEPSZEGO  TROSCIAN 
+
+                            LOVE Zuciaaa❤️❤️❤️❤️❤️❤️❤️</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/FURINA.png" alt="furina" style="width: 15%; height: 15%; margin-right: 200px; margin-top: 100px;">
+                        </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-12">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/igor.png" alt="Zdjęcie: Igor"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Igor</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">ania wszystkiego najlepszego duzo monsterow zdrowia i dozywotniego crunchyrolla !!</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                        <img src="minimages/AFTONN.png" alt="afton" style="width: 15%; height: 15%; margin-right: 150px; margin-top: 50px; transform: scaleX(-1);">
+                    </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--right" id="window-row-12b">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/milena.png" alt="Zdjęcie: Milena"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Milena</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Aniu ma kochana pokaz mi Swe kolana bo jestem w tobie zakochana
+                            A jak kolan nie pokażesz, me serce ukarzesz
+                            Sto lat sto lat żyj nam zdrowo i nie zapominaj kogo urodziny twe obchodzą</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                            <img src="minimages/ktos.png" alt="ktos" style="width: 15%; height: 15%; margin-right: 200px; margin-top: 60px;">
+                        </article>
+                    <article class="imagewindow-wrap imagewindow-wrap--left" id="window-row-13">
+                        <div class="imagewindow-wrap__media">
+                            <div class="image-window"><div class="image-window__mat"><img class="image-window__content" src="faceimages/filp.png" alt="Zdjęcie: Filip"></div><img class="image-window__frame" src="bgimages/imagewindow.png" alt="" width="267" height="268"></div>
+                            <p class="image-window__name">Filip</p>
+                        </div>
+                        <div class="text-window"><p class="text-window__content">Wszystkiego najlepszego ania dużo kasy dużo szczęścia niech schizofrenia ci nie doskwiera dużo blade-ow i dużo naoyi naoliwionych smacznego</p><img class="text-window__frame" src="bgimages/textwindow.png" alt=""></div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <div id="password-gate" class="password-gate" role="presentation">
+            <div class="countdown-clock" id="countdown-clock" role="timer">
+                <!-- Napis z datą: dopasuj do stałych COUNTDOWN_* w script.js -->
+                <div id="countdown-clock-running" class="countdown-clock__running">
+                    <p class="countdown-clock__caption">
+                        Do <strong>6 maja 2026</strong> · <strong>18:00</strong>
+                        <span class="countdown-clock__tz">czas polski (Europe/Warsaw)</span>
+                    </p>
+                    <div class="countdown-clock__grid">
+                        <div class="countdown-clock__cell">
+                            <span class="countdown-clock__value" id="countdown-days">0</span>
+                            <span class="countdown-clock__unit">dni</span>
+                        </div>
+                        <div class="countdown-clock__cell">
+                            <span class="countdown-clock__value" id="countdown-hours">0</span>
+                            <span class="countdown-clock__unit">godz</span>
+                        </div>
+                        <div class="countdown-clock__cell">
+                            <span class="countdown-clock__value" id="countdown-minutes">0</span>
+                            <span class="countdown-clock__unit">min</span>
+                        </div>
+                        <div class="countdown-clock__cell">
+                            <span class="countdown-clock__value" id="countdown-seconds">0</span>
+                            <span class="countdown-clock__unit">sek</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="countdown-clock__finished" id="countdown-finished" hidden>Happy Birthday!</p>
+            </div>
+            <div
+                class="password-gate__window"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="password-gate-title"
+            >
+                <header class="password-gate__titlebar">
+                    <span class="password-gate__title-dots" aria-hidden="true"></span>
+                    <h2 class="password-gate__title" id="password-gate-title">Secure login</h2>
+                    <span class="password-gate__title-dots password-gate__title-dots--right" aria-hidden="true"></span>
+                </header>
+                <div class="password-gate__body">
+                    <label class="password-gate__label" for="password-input">Password</label>
+                    <input
+                        type="password"
+                        id="password-input"
+                        class="password-gate__input"
+                        placeholder="········"
+                        autocomplete="current-password"
+                    >
+                    <button type="button" id="password-button" class="password-gate__btn">Login</button>
+                    <div id="password-error" class="password-error" role="alert">Invalid password</div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <p>Made by Krystian with help in designing from Daria, Piotrek, Zofia.</p>
+        </footer>
+    </main>
+
+    <aside class="page-aside page-aside--right" aria-hidden="true"></aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
