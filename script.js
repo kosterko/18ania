@@ -1,4 +1,4 @@
-const CORRECT_PASSWORD = "1";
+const CORRECT_PASSWORD = "EdekZjadłSołtysa";
 
 const COUNTDOWN_TIMEZONE = "Europe/Warsaw";
 
